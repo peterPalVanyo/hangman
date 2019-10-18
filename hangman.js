@@ -1,14 +1,14 @@
 const Hangman = function(word, remaining) {
     this.word = word.toLowerCase().split('')
     this.remaining = remaining
-    this.guessedLetters = ['h']
+    this.guessedLetters = ['k']
 }
 
 
 Hangman.prototype.getPuzzle = function() {
     puzzle = ''
     this.word.forEach(letter => {
-        letter === ' ' ? puzzle += ' ' : puzzle += '*'
+        letter === ' ' || this.guessedLetters.includes(letter) ? puzzle += letter : puzzle += '*'
     });
     return puzzle
 }
