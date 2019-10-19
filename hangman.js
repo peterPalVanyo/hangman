@@ -26,14 +26,6 @@ Hangman.prototype.makeGuess = function(letter) {
     if(!isNew || !isCharacter) console.log('next time...')
 }
 
-const hangman = new Hangman('akarok barackot', 3)
-console.log(hangman.getPuzzle())
 
-window.addEventListener('keypress', function(e) {
-    const letter = String.fromCharCode(e.charCode)
-    hangman.makeGuess(letter)
-    console.log(hangman.getPuzzle())
-    console.log(hangman.remaining + " " + hangman.guessedLetters)
-})
 
 
