@@ -14,17 +14,16 @@ window.addEventListener('keypress', function(e) {
     scoreEl.textContent = hangman.statusMessage
 })
 
-getWords(3).then((words) => {
-    console.log(words)
-}, (err) => {
-    console.log(`error: ${err}`)
-})
-
-
-
-
-getCountry('HU').then((name) => {
-    console.log(name)
-}, (err) => {
+getWords(3).then((data) => {
+    console.log(data)
+}).catch((err) => {
     console.log(err)
 })
+
+
+getCountry('HU').then((country) => {
+    console.log(country)
+}).catch((err) => {
+    console.log(err)
+})
+
